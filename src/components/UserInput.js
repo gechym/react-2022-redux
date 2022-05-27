@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import * as userAPI from '../api/userApi';
 import { useDispatch } from 'react-redux';
+import { createUser, updateUser } from '~/Redux/thunks/userThunk';
 
 const UserInput = ({ editUser, setUserEdit }) => {
     const [name, setName] = useState('');
@@ -19,49 +19,11 @@ const UserInput = ({ editUser, setUserEdit }) => {
         const createdAt = new Date().toISOString();
 
         if (editUser) {
-            try {
-                dispatch({ type: 'users/update_request' });
-                const newUser = { ...editUser, name, avatar };
-                const data = await userAPI.updateUser(newUser);
-
-                dispatch({ type: 'users/update_success', payload: data });
-            } catch (error) {
-                if (error.response.data?.msg) {
-                    dispatch({
-                        type: 'users/update_error',
-                        payload: error.response.data?.msg,
-                    });
-                    throw new Error(error.response.data?.msg);
-                } else {
-                    dispatch({
-                        type: 'users/update_error',
-                        payload: error.message,
-                    });
-                    throw new Error(error.message);
-                }
-            }
+            const newUser = { ...editUser, name, avatar };
+            dispatch(updateUser(newUser));
         } else {
-            dispatch({ type: 'users/create_request' });
-            try {
-                const data = await userAPI.createUser({ name, avatar, createdAt });
-                console.log(data);
-
-                dispatch({ type: 'users/create_success', payload: data });
-            } catch (error) {
-                if (error.response.data?.msg) {
-                    dispatch({
-                        type: 'users/create_error',
-                        payload: error.response.data?.msg,
-                    });
-                    throw new Error(error.response.data?.msg);
-                } else {
-                    dispatch({
-                        type: 'users/create_error',
-                        payload: error.message,
-                    });
-                    throw new Error(error.message);
-                }
-            }
+            const newUser = { name, avatar, createdAt };
+            dispatch(createUser(newUser));
         }
 
         setUserEdit(undefined);

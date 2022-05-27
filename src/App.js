@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { getUsers } from './api/userApi';
 import { useDispatch, useSelector } from 'react-redux';
+
 import Card from './components/Card';
 import Spinner from './components/Spinner';
 import UserInput from './components/UserInput';
+
+import { getUsers } from '~/Redux/thunks/userThunk';
 
 function App() {
     const [userEdit, setUserEdit] = useState();
@@ -16,28 +18,7 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch({ type: 'users/fetch_request' });
-
-        const fetchData = async () => {
-            try {
-                const res = await getUsers();
-                dispatch({ type: 'users/fetch_success', payload: res });
-            } catch (error) {
-                console.log(error);
-                if (error.response.data?.msg) {
-                    dispatch({
-                        type: 'users/fetch_error',
-                        payload: error.response.data?.msg,
-                    });
-                    throw new Error(error.response.data?.msg);
-                } else {
-                    dispatch({ type: 'users/fetch_error', payload: error.message });
-                    throw new Error(error.message);
-                }
-            }
-        };
-
-        fetchData();
+        dispatch(getUsers(123));
     }, [dispatch]);
 
     return (
