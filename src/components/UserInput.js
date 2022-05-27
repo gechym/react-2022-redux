@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import * as userAPI from '../api/userApi';
-import store from '~/Redux/store';
+import { useDispatch } from '~/Redux/React-redux/Provider';
 
 const UserInput = ({ editUser, setUserEdit }) => {
     const [name, setName] = useState('');
     const [avatar, setAvatar] = useState('');
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if (editUser) {
@@ -19,20 +20,20 @@ const UserInput = ({ editUser, setUserEdit }) => {
 
         if (editUser) {
             try {
-                store.dispatch({ type: 'users/update_request' });
+                dispatch({ type: 'users/update_request' });
                 const newUser = { ...editUser, name, avatar };
                 const data = await userAPI.updateUser(newUser);
 
-                store.dispatch({ type: 'users/update_success', payload: data });
+                dispatch({ type: 'users/update_success', payload: data });
             } catch (error) {
                 if (error.response.data?.msg) {
-                    store.dispatch({
+                    dispatch({
                         type: 'users/update_error',
                         payload: error.response.data?.msg,
                     });
                     throw new Error(error.response.data?.msg);
                 } else {
-                    store.dispatch({
+                    dispatch({
                         type: 'users/update_error',
                         payload: error.message,
                     });
@@ -40,21 +41,21 @@ const UserInput = ({ editUser, setUserEdit }) => {
                 }
             }
         } else {
-            store.dispatch({ type: 'users/create_request' });
+            dispatch({ type: 'users/create_request' });
             try {
                 const data = await userAPI.createUser({ name, avatar, createdAt });
                 console.log(data);
 
-                store.dispatch({ type: 'users/create_success', payload: data });
+                dispatch({ type: 'users/create_success', payload: data });
             } catch (error) {
                 if (error.response.data?.msg) {
-                    store.dispatch({
+                    dispatch({
                         type: 'users/create_error',
                         payload: error.response.data?.msg,
                     });
                     throw new Error(error.response.data?.msg);
                 } else {
-                    store.dispatch({
+                    dispatch({
                         type: 'users/create_error',
                         payload: error.message,
                     });

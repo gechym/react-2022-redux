@@ -1,16 +1,18 @@
 import React from 'react';
 import * as userAPI from '../api/userApi';
 
-import store from '~/Redux/store';
+import { useDispatch } from '~/Redux/React-redux/Provider';
 const Card = ({ user, setUserEdit }) => {
+    const dispatch = useDispatch();
+
     const handleDeleteUser = async (id) => {
-        store.dispatch({ type: 'users/delete_request' });
+        dispatch({ type: 'users/delete_request' });
 
         try {
             await userAPI.deleteUser(id);
-            store.dispatch({ type: 'users/delete_success', payload: id });
+            dispatch({ type: 'users/delete_success', payload: id });
         } catch (err) {
-            store.dispatch({ type: 'users/delete_error', payload: err });
+            dispatch({ type: 'users/delete_error', payload: err });
         }
     };
 
