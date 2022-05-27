@@ -1,7 +1,7 @@
 import React from 'react';
 import * as userAPI from '../api/userApi';
 
-import { useDispatch } from '~/Redux/React-redux/Provider';
+import { useDispatch } from 'react-redux';
 const Card = ({ user, setUserEdit }) => {
     const dispatch = useDispatch();
 

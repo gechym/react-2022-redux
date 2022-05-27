@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getUsers } from './api/userApi';
-import { useDispatch, useSelector } from '~/Redux/React-redux/Provider';
+import { useDispatch, useSelector } from 'react-redux';
 import Card from './components/Card';
 import Spinner from './components/Spinner';
 import UserInput from './components/UserInput';
