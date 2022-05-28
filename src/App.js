@@ -5,8 +5,6 @@ import Card from './components/Card';
 import Spinner from './components/Spinner';
 import UserInput from './components/UserInput';
 
-import { getUsers } from '~/Redux/thunks/userThunk';
-
 function App() {
     const [userEdit, setUserEdit] = useState();
 

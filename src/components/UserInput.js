@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createUser, updateUser } from '~/Redux/thunks/userThunk';
 
 const UserInput = ({ editUser, setUserEdit }) => {
     const [name, setName] = useState('');
