@@ -5,12 +5,16 @@ import Card from './components/Card';
 import Spinner from './components/Spinner';
 import UserInput from './components/UserInput';
 
-import { getUsers } from '~/Redux/thunks/userThunk';
+import { getUser } from '~/Redux/toolkit/useSlice';
 
 function App() {
     const [userEdit, setUserEdit] = useState();
 
-    const { error, loading, data: users } = useSelector((state) => state.userState);
+    const {
+        error,
+        loading,
+        data: users,
+    } = useSelector((state) => state.userState);
 
     // const state = useSelector2();
     // console.log(state);
@@ -18,7 +22,7 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getUsers(123));
+        dispatch(getUser());
     }, [dispatch]);
 
     return (

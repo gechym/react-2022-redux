@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createUser, updateUser } from '~/Redux/thunks/userThunk';
+import { createUser, updateUser } from '~/Redux/toolkit/useSlice';
 
 const UserInput = ({ editUser, setUserEdit }) => {
     const [name, setName] = useState('');
@@ -35,12 +35,22 @@ const UserInput = ({ editUser, setUserEdit }) => {
         <form className="user_input" onSubmit={handleSubmit}>
             <div className="input-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" required value={name} onChange={(e) => setName(e.target.value)} />
+                <input
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
             </div>
 
             <div className="input-group">
                 <label htmlFor="avatar">Avatar</label>
-                <input type="text" required value={avatar} onChange={(e) => setAvatar(e.target.value)} />
+                <input
+                    type="text"
+                    required
+                    value={avatar}
+                    onChange={(e) => setAvatar(e.target.value)}
+                />
             </div>
 
             <button type="submit">{editUser ? 'Update' : 'Add'}</button>

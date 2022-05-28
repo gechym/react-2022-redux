@@ -1,5 +1,5 @@
 import * as useApi from '~/api/userApi';
-import * as userActions from '~/Redux/Actions/useActions';
+import { userActions } from '~/Redux/toolkit/useSlice';
 
 export const getUsers = (id) => async (dispatch) => {
     console.log(id);
