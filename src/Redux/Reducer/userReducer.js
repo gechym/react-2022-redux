@@ -1,3 +1,4 @@
+import * as userConst from '~/Redux/Constant/userConst';
 const initialState = {
     data: [],
     loading: false,
@@ -6,7 +7,7 @@ const initialState = {
 
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'users/fetch_success':
+        case userConst.fetch_success:
             const newState = {
                 ...state,
                 loading: false,
@@ -15,26 +16,26 @@ const userReducer = (state = initialState, action) => {
             };
             return newState;
 
-        case 'users/fetch_request':
+        case userConst.fetch_request:
             return {
                 ...state,
                 loading: true,
             };
 
-        case 'users/fetch_error':
+        case userConst.fetch_error:
             return {
                 ...state,
                 loading: false,
                 error: action.payload,
             };
 
-        case 'users/create_request':
+        case userConst.create_request:
             return {
                 ...state,
                 loading: true,
             };
 
-        case 'users/create_success':
+        case userConst.create_success:
             return {
                 ...state,
                 loading: false,
@@ -42,7 +43,7 @@ const userReducer = (state = initialState, action) => {
                 data: [action.payload, ...state.data],
             };
 
-        case 'users/create_error':
+        case userConst.create_error:
             return {
                 ...state,
                 loading: false,
@@ -50,20 +51,20 @@ const userReducer = (state = initialState, action) => {
             };
 
         // Update user
-        case 'users/update_request':
+        case userConst.update_request:
             return {
                 ...state,
                 loading: true,
             };
 
-        case 'users/update_success':
+        case userConst.update_success:
             return {
                 ...state,
                 loading: false,
                 data: state.data?.map((item) => (item.id === action.payload.id ? action.payload : item)),
             };
 
-        case 'users/update_error':
+        case userConst.update_error:
             return {
                 ...state,
                 loading: false,
@@ -71,20 +72,20 @@ const userReducer = (state = initialState, action) => {
             };
 
         // Delete user
-        case 'users/delete_request':
+        case userConst.delete_request:
             return {
                 ...state,
                 loading: true,
             };
 
-        case 'users/delete_success':
+        case userConst.delete_success:
             return {
                 ...state,
                 loading: false,
                 data: state.data?.filter((item) => item.id !== action.payload),
             };
 
-        case 'users/delete_error':
+        case userConst.delete_error:
             return {
                 ...state,
                 loading: false,
