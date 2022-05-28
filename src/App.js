@@ -18,7 +18,8 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getUsers(123));
+        // dispatch(getUsers)
+        dispatch({ type: 'users/fetch_request' });
     }, [dispatch]);
 
     return (

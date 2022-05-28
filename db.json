@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "name": "Jana Bauch",
-      "avatar": "https://images.pexels.com/photos/9275279/pexels-photo-9275279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "createdAt": "2021-10-08T09:17:55.726Z",
-      "id": "1"
-    },
-    {
       "name": "Mrs. Raymond Waters",
       "avatar": "https://images.pexels.com/photos/7143201/pexels-photo-7143201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "createdAt": "2021-10-08T12:44:10.708Z",
@@ -223,124 +217,16 @@
       "id": "37"
     },
     {
-      "name": "Sharon Mayer PhD",
-      "avatar": "https://images.pexels.com/photos/10569936/pexels-photo-10569936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "createdAt": "2021-10-10T08:44:46.755Z",
-      "id": "38"
-    },
-    {
-      "name": "Dr. Darrin Steuber",
-      "avatar": "https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "createdAt": "2021-10-10T12:26:58.473Z",
-      "id": "39"
-    },
-    {
-      "name": "Casey Fay",
-      "avatar": "https://images.pexels.com/photos/4126684/pexels-photo-4126684.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T18:57:41.074Z",
-      "id": "40"
-    },
-    {
       "name": "Dr. Darryl Nader",
       "avatar": "https://images.pexels.com/photos/4348628/pexels-photo-4348628.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "createdAt": "2021-10-10T06:39:47.002Z",
       "id": "41"
     },
     {
-      "name": "Paulette Leffler 123123",
-      "avatar": "https://images.pexels.com/photos/4126797/pexels-photo-4126797.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T23:25:42.344Z",
-      "id": "43"
-    },
-    {
-      "name": "Inez Feeney PhD",
-      "avatar": "https://images.pexels.com/photos/8107443/pexels-photo-8107443.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T10:34:47.829Z",
-      "id": "44"
-    },
-    {
-      "name": "Christina Nikolaus",
-      "avatar": "https://images.pexels.com/photos/6976558/pexels-photo-6976558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "createdAt": "2021-10-10T10:52:41.859Z",
-      "id": "46"
-    },
-    {
-      "name": "Mr. Sabrina Heaney",
-      "avatar": "https://images.pexels.com/photos/5480358/pexels-photo-5480358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T08:07:00.156Z",
-      "id": "49"
-    },
-    {
-      "name": "Mrs. Carla Grant",
-      "avatar": "https://images.pexels.com/photos/6129365/pexels-photo-6129365.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T09:21:43.962Z",
-      "id": "50"
-    },
-    {
-      "name": "Roxanne Rath III",
-      "avatar": "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "createdAt": "2021-10-10T12:56:09.922Z",
-      "id": "51"
-    },
-    {
-      "name": "Phillip Lind DDS",
-      "avatar": "https://images.pexels.com/photos/4172933/pexels-photo-4172933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "createdAt": "2021-10-10T18:16:38.694Z",
-      "id": "52"
-    },
-    {
       "name": "Scott Heathcote",
       "avatar": "https://images.pexels.com/photos/4348637/pexels-photo-4348637.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "createdAt": "2021-10-10T07:14:38.337Z",
       "id": "53"
-    },
-    {
-      "name": "Mrs. Kelvin Sauer",
-      "avatar": "https://images.pexels.com/photos/6875102/pexels-photo-6875102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "createdAt": "2021-10-10T08:44:39.394Z",
-      "id": "54"
-    },
-    {
-      "name": "Carroll Trantow",
-      "avatar": "https://images.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T17:32:55.948Z",
-      "id": "55"
-    },
-    {
-      "name": "Mrs. Grace Rice",
-      "avatar": "https://images.pexels.com/photos/3987107/pexels-photo-3987107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "createdAt": "2021-10-10T17:59:10.656Z",
-      "id": "57"
-    },
-    {
-      "name": "Kimberly Towne",
-      "avatar": "https://images.pexels.com/photos/9462346/pexels-photo-9462346.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T08:02:28.394Z",
-      "id": "58"
-    },
-    {
-      "name": "Naomi Bechtelar",
-      "avatar": "https://images.pexels.com/photos/5480326/pexels-photo-5480326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T08:55:13.020Z",
-      "id": "59"
-    },
-    {
-      "name": "Shane O'Kon",
-      "avatar": "https://images.pexels.com/photos/1321909/pexels-photo-1321909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T08:52:18.747Z",
-      "id": "60"
-    },
-    {
-      "name": "Alan Witting I",
-      "avatar": "https://images.pexels.com/photos/5436044/pexels-photo-5436044.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "createdAt": "2021-10-10T08:34:22.773Z",
-      "id": "62"
-    },
-    {
-      "name": "cc",
-      "avatar": "cc",
-      "createdAt": "2022-05-27T17:33:53.235Z",
-      "id": "L5DfA5w"
     }
   ]
 }

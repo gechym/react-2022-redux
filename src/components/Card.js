@@ -6,7 +6,8 @@ const Card = ({ user, setUserEdit }) => {
     const dispatch = useDispatch();
 
     const handleDeleteUser = async (id) => {
-        dispatch(deleteUser(id));
+        // dispatch(deleteUser(id));
+        dispatch({ type: 'users/delete_request', payload: id });
     };
 
     return (

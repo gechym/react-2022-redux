@@ -20,10 +20,11 @@ const UserInput = ({ editUser, setUserEdit }) => {
 
         if (editUser) {
             const newUser = { ...editUser, name, avatar };
-            dispatch(updateUser(newUser));
+            dispatch({ type: 'users/update_request', payload: newUser });
         } else {
             const newUser = { name, avatar, createdAt };
-            dispatch(createUser(newUser));
+            // dispatch(createUser(newUser));
+            dispatch({ type: 'users/create_request', payload: newUser });
         }
 
         setUserEdit(undefined);
