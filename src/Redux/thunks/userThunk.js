@@ -1,8 +1,11 @@
 import * as useApi from '~/api/userApi';
 import * as userActions from '~/Redux/Actions/useActions';
 
-export const getUsers = (id) => async (dispatch) => {
+export const getUsers = (id) => async (dispatch, getState) => {
+    // get starte
     console.log(id);
+    console.log(getState().userState);
+
     dispatch(userActions.fetch_request());
     try {
         const res = await useApi.getUsers();
@@ -12,7 +15,7 @@ export const getUsers = (id) => async (dispatch) => {
     }
 };
 
-export const deleteUser = (id) => async (dispatch) => {
+export const deleteUser = (id) => async (dispatch, getState) => {
     dispatch(userActions.delete_request());
     try {
         await useApi.deleteUser(id);
@@ -28,7 +31,7 @@ export const deleteUser = (id) => async (dispatch) => {
     }
 };
 
-export const updateUser = (user) => async (dispatch) => {
+export const updateUser = (user) => async (dispatch, getState) => {
     try {
         dispatch(userActions.update_request());
         const data = await useApi.updateUser(user);
@@ -45,7 +48,7 @@ export const updateUser = (user) => async (dispatch) => {
     }
 };
 
-export const createUser = (user) => async (dispatch) => {
+export const createUser = (user) => async (dispatch, getState) => {
     dispatch(userActions.create_request());
     try {
         const data = await useApi.createUser(user);
